@@ -1,4 +1,4 @@
-import { reactive } from 'vue'
+import { reactive } from '@vue/reactivity'
 import { throttle } from 'fpts/timing'
 
 function record_map<A, B>(f: (x: A) => B, xs: Record<string, A>): Record<string, B> {
@@ -52,6 +52,6 @@ export default function make_storage<T extends Record<string, any>>(t: number =5
 	return reactive(new Proxy(
         target,
         // @ts-ignore
-        handler
+        handler,
     ))
 }

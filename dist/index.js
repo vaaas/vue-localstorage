@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const vue_1 = require("vue");
+const reactivity_1 = require("@vue/reactivity");
 const timing_1 = require("fpts/timing");
 function record_map(f, xs) {
     return Object.fromEntries(Object.entries(xs).map(x => [x[0], f(x[1])]));
@@ -42,7 +42,7 @@ function make_storage(t = 5000) {
             return true;
         },
     };
-    return (0, vue_1.reactive)(new Proxy(target, 
+    return (0, reactivity_1.reactive)(new Proxy(target, 
     // @ts-ignore
     handler));
 }
