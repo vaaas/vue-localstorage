@@ -1,6 +1,5 @@
 import { reactive } from 'vue'
 import { throttle } from 'fpts/timing'
-import type {AddPrefix} from 'fpts/data'
 
 function record_map<A, B>(f: (x: A) => B, xs: Record<string, A>): Record<string, B> {
     return Object.fromEntries(
