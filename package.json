@@ -1,0 +1,15 @@
+{
+	"name": "vue-localstorage",
+	"main": "dist/index.js",
+	"dependencies": {
+		"@vue/reactivity": "^3.2.33"
+	},
+	"devDependencies": {
+		"@babel/types": "^7.18.9",
+		"@types/vue": "^2.0.0",
+		"fpts": "github:vaaas/fpts"
+	},
+	"scripts": {
+		"build": "tsc"
+	}
+}
