@@ -1,5 +1,6 @@
 {
 	"name": "vue-localstorage",
+	"version": "1.0.0",
 	"main": "dist/index.js",
 	"dependencies": {
 		"@vue/reactivity": "^3.2.33",
