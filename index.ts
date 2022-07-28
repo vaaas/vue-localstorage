@@ -22,8 +22,10 @@ export default function make_storage<T extends Record<string, any>>(t: number =5
 
 	function update_now(): void {
 		for (const x of dirty)
-			if (target[x]) localStorage.setItem(x, JSON.stringify(target[x]))
-			else localStorage.removeItem(x)
+			if (target.hasOwnProperty(x))
+				localStorage.setItem(x, JSON.stringify(target[x]))
+			else
+				localStorage.removeItem(x)
 		dirty.clear()
 	}
 
