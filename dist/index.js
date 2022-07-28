@@ -18,7 +18,7 @@ function make_storage(t = 5000) {
     const dirty = new Set();
     function update_now() {
         for (const x of dirty)
-            if (target[x])
+            if (target.hasOwnProperty(x))
                 localStorage.setItem(x, JSON.stringify(target[x]));
             else
                 localStorage.removeItem(x);
